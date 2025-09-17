@@ -1,0 +1,132 @@
+\documentclass[10pt]{article}
+% pdflatex <input>
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}  % Page layout
+\usepackage{fancyhdr}  % Header and footer management
+\usepackage{parskip}   % Space between paragraphs
+
+\lstset{
+  language=Python,
+  backgroundcolor=\color{white},   % White background
+  basicstyle=\ttfamily\footnotesize, % Typewriter style and smaller font size
+  keywordstyle=\color{black},        % Black for keywords like def, if, etc.
+  commentstyle=\color{gray},         % Gray for comments
+  stringstyle=\color{darkgray},      % Dark gray for strings
+  numbers=left,                      % Line numbers on the left
+  stepnumber=1,                      % Number every line
+  numberstyle=\tiny\color{gray},     % Small and gray numbers
+  frame=single,                      % Frame around code
+  captionpos=b,                      % Position of caption (at the bottom)
+  breaklines=true,                   % Line breaking
+  breakatwhitespace=true,            % Break lines at spaces
+  showspaces=false,                  % Do not show space characters
+  showstringspaces=false             % Do not show spaces inside strings
+}
+% Page layout settings
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\section*{Evaluación diagnóstica Python}
+\textmd{Mitsiu Alejandro Carreño Sarabia}
+
+% Student Information
+\noindent
+\textbf{Nombre completo:} \underline{\hspace{10cm}} \\
+\textbf{Mátricula:} \underline{\hspace{10cm}} \\
+
+% Instructions
+\noindent \textbf{Indicaciones:}
+\normalfont{La siguiente evaluación tiene como propósito conocer el nivel de familiaridad del alumno con el lenguaje Python.} \\
+\textbf{Esta evaluación no tiene valor sobre la calificación.}
+\vspace{0.3cm}
+
+\textmd{1. Para qué sirve el siguiente comando }
+\begin{lstlisting}
+python --version
+\end{lstlisting}
+
+\vspace{2cm} % Space for the answer
+
+\textmd{2. Cuál es el error (lógico) en el siguiente código}
+\begin{lstlisting}
+if 5 > 2:
+print("Five is greater than two!")
+\end{lstlisting}
+
+\vspace{4cm} % Space for the answer
+
+\textmd{3. ¿La siguiente línea es válida en Python? de ser así ¿para qué sirve?}
+\begin{lstlisting}
+#print("Hello World")
+\end{lstlisting}
+
+\vspace{2cm} % Space for the answer
+
+\textmd{4. ¿La siguiente línea es válida en Python? de ser así ¿qué operación está realizando?}
+\begin{lstlisting}
+x, y, z = "Orange", "Banana", "Cherry"
+\end{lstlisting}
+
+\vspace{3cm} % Space for the answer
+
+\textmd{5. ¿Qué código se debe agregar en la línea 3 para ejecutar la función my\_function?}
+\begin{lstlisting}
+def my_function():
+  print("Hello from a function")
+
+\end{lstlisting}
+
+\vspace{2cm} % Space for the answer
+
+\textmd{6. Para cada una de las siguientes variables escribe a la derecha su tipo de dato}
+\begin{lstlisting}
+x = "Hello World"
+x = 20
+x = 20.5
+x = 1j
+x = ["apple", "banana", "cherry"]
+x = ("apple", "banana", "cherry")
+x = range(6)
+x = {"name" : "John", "age" : 36}
+x = {"apple", "banana", "cherry"}
+x = True
+x = bytearray(5)
+x = None
+\end{lstlisting}
+
+\textmd{7. ¿Escribe cuál es el código para conocer el tipo de dato de una variable x?}
+\vspace{3cm} % Space for the answer
+
+\textmd{8. ¿El siguiente código es válido? Justifique su respuesta}
+\begin{lstlisting}
+x = 5
+y = "John"
+print(x + y)
+\end{lstlisting}
+
+\vspace{3cm} % Space for the answer
+
+\textmd{9. ¿El siguiente código es válido? Justifique su respuesta}
+\begin{lstlisting}
+def my_function(country = "Norway"):
+  print("I am from " + country)
+my_function()
+\end{lstlisting}
+
+\vspace{4cm} % Space for the answer
+
+\textmd{10. ¿Cuál es el resultado del siguiente código?}
+\begin{lstlisting}
+def my_function(x):
+  return 5 * x
+
+print(my_function(3))
+\end{lstlisting}
+
+\vspace{2cm} % Space for the answer
+
+\textmd{11. ¿Qué hace que un profesor sea excelente?}
+\vspace{4cm} % Space for the answer
+\end{document}

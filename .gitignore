@@ -1,0 +1,8 @@
+# Vim
+*.swp
+# Latex
+*.aux
+*.log
+
+# Java
+*.class
