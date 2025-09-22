@@ -10,12 +10,12 @@ theme:
 <!-- column_layout: [2,3] -->
 <!-- column: 0 -->
 <!-- jump_to_middle -->
-# **Intro Object Oriented Programming**
+# **Arrays**
 
 Mitsiu Alejandro Carreño Sarabia
 <!-- column: 1 -->
 <!-- jump_to_middle -->
-![](./assets/merge.gif)
+![](./assets/set.jpg)
 <!-- reset_layout -->
 
 <!-- end_slide -->
@@ -116,67 +116,6 @@ class Demo {
 ```
 <!-- end_slide -->
 
-##### Intro POO
-# Scenario
----
-We want a program to store UPA personnel data (students, teachers, admins, etc), for each user we want:
-- Name
-- Age
-- Email
-
-<!-- pause -->
-Does it scale well for `three users`?
-
-<!-- end_slide -->
-
-##### Intro POO
-## Object oriented solution 
----
-We want to bind all our properties (name, age, email) together as a single entity/object.
-
-<!-- column_layout: [1,1] -->
-<!-- column: 0 -->
-![](./assets/usuario_attr.png)
-<!-- column: 1 -->
-Our endgoal is to group our attributes into a single object
-```java +line_numbers {all}
-persona1.nombre
-persona1.edad
-persona1.correo
-```
-<!-- reset_layout -->
-<!-- end_slide -->
-
-##### Intro POO
-### Classes
----
-Let's focus on the red section
-<!-- column_layout: [1,2] -->
-<!-- column: 0 -->
-![](./assets/usuario_class.png)
-<!-- column: 1 -->
-- What's our name convetion for classes?
-<!-- pause -->
-```java +line_numbers {all}
-class Usuario {
-   ... 
-}
-class E9IntroPoo{
-    public static void main (
-        String[] args
-    ){...}
-}
-```
-<!-- end_slide -->
-
-##### Intro POO
-### Classes
----
-Finally lets complete our full class
-![](./assets/usuario_attr.png)
-
-<!-- end_slide -->
 ###### References
 ---
-https://www.oracle.com/java/technologies/glossary.html
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html

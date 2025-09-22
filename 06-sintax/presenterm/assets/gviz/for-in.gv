@@ -1,0 +1,56 @@
+digraph G {
+  #dot -Tpng -Gsize=9,15\! -Gdpi=100  if.gv -o if.png && kitty icat if.png
+  # magick -delay 100 -loop 0 for-in-*.png for-in.gif
+  graph [
+    fontname = "Monserrat",
+    fontcolor="white",
+    bgcolor="#10141c",
+    #bgcolor="transparent"
+    penwidth=1.5,
+    newrank=true, # Permite alinear itr
+    #rankdir="BT"
+    color=white
+  ];
+  node [
+    fontcolor="white",
+    fontname = "helvetica"
+    color="#37CDCB"
+  ];
+  edge [
+    fontcolor="white",
+    color="white"
+    fontname = "helvetica"
+  ];
+
+  itr [shape=rarrow, color="#D2A600", label="element =  "]
+  { rank = same; itr; a3;}
+
+  subgraph cluster_0 {
+    ranksep=0.5
+    node [penwidth=0]
+    a3 [label="A"]
+    a2 [label="B"]
+    a1 [label="C"]
+    a0 [label="D"]
+    a3 -> a2 -> a1 -> a0 [style=invis];
+    label = "Conjunto";
+    labelloc="t"
+  }
+
+  anchor [style=invis]
+  a0 -> anchor [style=invis]
+
+  subgraph cluster_2 {
+    e1 [label="Expr 1"]
+    e1;
+    label = "Bloque dentro de for-in";
+    labelloc="b"
+  }
+
+  e2 [label="Expr 2"]
+
+  itr -> e1;
+  e1 -> e2 [style=invis];
+
+  { rank = same; e1; anchor; e2}
+}

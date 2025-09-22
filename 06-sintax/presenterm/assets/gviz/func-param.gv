@@ -1,0 +1,61 @@
+digraph G {
+  #dot -Tpng -Gsize=9,15\! -Gdpi=100  if.gv -o if.png && kitty icat if.png
+  # magick -delay 100 -loop 0 for-in-*.png for-in.gif
+  graph [
+    splines=false
+    fontname = "Monserrat",
+    fontcolor="white",
+    #bgcolor="#10141c",
+    bgcolor="transparent"
+    penwidth=1.5,
+    newrank=true, # Permite alinear itr
+    rankdir="TB"
+    color=white
+  ];
+  node [
+    fontcolor="white",
+    fontname = "helvetica"
+    color="#37CDCB"
+  ];
+  edge [
+    fontcolor="white",
+    color="white"
+    fontname = "helvetica"
+  ];
+
+  e1 [label="Expr 1"]
+  e3 [label="Expr 3"]
+
+  e1 -> e3;
+  e3 -> p1;
+
+  subgraph cluster_1 {
+    rankdir="TB"
+    p1 [label="String nombre\n\t=Mitsiu"]
+    e2 [label="Expr 2"]
+    print [label="Sop(\"Hola \" + nombre)"]
+    p1 -> e2 -> print;
+    label = "saludar";
+    labelloc="b"
+  }
+
+  e4 [label="Expr 4"]
+
+  print -> e4;
+
+  subgraph cluster_2 {
+    pp1 [label="String nombre\n\t=Alejandro"]
+    ep2 [label="Expr 2"]
+    printp [label="Sop(\"Hola \" + nombre)"]
+    pp1 -> ep2 -> printp;
+    label = "saludar";
+    labelloc="t"
+  }
+
+  e4 -> pp1;
+  e5 [label="Expr 5"]
+
+  printp -> e5;
+
+  { rank=same; e3; e4; }
+}

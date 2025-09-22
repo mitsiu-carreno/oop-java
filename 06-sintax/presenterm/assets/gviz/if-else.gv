@@ -1,0 +1,36 @@
+digraph G {
+  #dot -Tpng -Gsize=9,15\! -Gdpi=100  if.gv -o if.png && kitty icat if.png
+  graph [
+    fontname = "Monserrat",
+    fontcolor="white",
+    #bgcolor="black",
+    bgcolor="transparent"
+    penwidth=1.5,
+    #newrank=true, # Permite alinear HEAD
+    rankdir="TB"
+    color=white
+  ];
+  node [
+    fontcolor="white",
+    fontname = "helvetica"
+    color="#37CDCB"
+  ];
+  edge [
+    fontcolor="white",
+    color="white"
+    fontname = "helvetica"
+  ];
+
+  e1 [label="Expr 1"]
+  c1 [label="Condición" shape=Mdiamond]
+  e2 [label="Expr 2"]
+  e3 [label="Expr 3"]
+  e4 [label="Expr 4"]
+  e1 -> c1;
+  c1-> e2 [headlabel="True" labeldistance=3.0];
+  c1 -> e3 [headlabel="False" labeldistance=3.0];
+  e3 -> e4;
+  e2 -> e4;
+
+  { rank = same;  e2, e3; }
+}

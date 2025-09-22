@@ -1,0 +1,57 @@
+digraph G {
+  #dot -Tpng -Gsize=9,15\! -Gdpi=100  if.gv -o if.png && kitty icat if.png
+  # magick -delay 100 -loop 0 for-in-*.png for-in.gif
+  graph [
+    fontname = "Monserrat",
+    fontcolor="white",
+    #bgcolor="#10141c",
+    bgcolor="transparent"
+    penwidth=1.5,
+    newrank=true, # Permite alinear itr
+    rankdir="TB"
+    color=white
+  ];
+  node [
+    fontcolor="white",
+    fontname = "helvetica"
+    color="#37CDCB"
+  ];
+  edge [
+    fontcolor="white",
+    color="white"
+    fontname = "helvetica"
+  ];
+
+  e1 [label="Expr 1"]
+  e5 [label="Expr 5"]
+
+  e1 -> e5;
+  e5 -> e2;
+
+  subgraph cluster_1 {
+    e2 [label="Expr 2"]
+    e3 [label="Expr 3"]
+    e4 [label="Expr 4"]
+    e2 -> e3 -> e4;
+    label = "my_func";
+    labelloc="b"
+  }
+
+  e6 [label="Expr 6"]
+
+  e4 -> e6;
+
+  subgraph cluster_2 {
+    ep2 [label="Expr 2"]
+    ep3 [label="Expr 3"]
+    ep4 [label="Expr 4"]
+    ep2 -> ep3 -> ep4;
+    label = "my_func";
+    labelloc="b"
+  }
+
+  e6 -> ep2;
+
+  { rank=same; e5; e6; }
+
+}
