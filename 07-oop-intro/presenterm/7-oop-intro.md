@@ -22,10 +22,12 @@ Mitsiu Alejandro Carreño Sarabia
 
 Agenda
 ---
+├── Concepts      
+├── Data types      
+├── Magic Words?      
 └── Intro POO      
 &nbsp;&nbsp;&nbsp;&nbsp;├── Scenario    
-&nbsp;&nbsp;&nbsp;&nbsp;├── Object oriented solution     
-&nbsp;&nbsp;&nbsp;&nbsp;└── Classes       
+&nbsp;&nbsp;&nbsp;&nbsp;└── Object Oriented Solution     
 <!-- end_slide -->
 
 # Concepts
@@ -83,49 +85,63 @@ class Demo {
 ##### Intro POO
 # Scenario
 ---
-We want a program to store UPA personnel data (students, teachers, admins, etc), for each user we want:
-- Name
-- Age
-- Email
+Our endgoal is to create an object like this:
+<!-- pause --> 
 
-<!-- pause -->
-Does it scale well for `three users`?
-
-<!-- end_slide -->
-
-##### Intro POO
-## Object oriented solution 
----
-We want to bind all our properties (name, age, email) together as a single entity/object.
-
-<!-- column_layout: [1,1] -->
+<!-- column_layout: [1,2] -->
 <!-- column: 0 -->
-![](./assets/usuario_attr.png)
+![](./assets/markers.png)
 <!-- column: 1 -->
-Our endgoal is to group our attributes into a single object
+<!-- pause -->
 ```java +line_numbers {all}
-persona1.nombre
-persona1.edad
-persona1.correo
+<?>[] estuchePlumones = new <?>[4];
 ```
+
+- What can **<?>** be?
 <!-- reset_layout -->
 <!-- end_slide -->
 
 ##### Intro POO
-### Classes
+# Scenario
+---
+```java +line_numbers {all}
+Marker[] estuchePlumones = new Marker[4];
+```
+<!-- column_layout: [1,2] -->
+<!-- column: 0 -->
+![](./assets/marker.png)
+<!-- column: 1 -->
+
+What properties (variables) should be in Marker?          
+        
+Or asked other way        
+           
+If Marker was a `database table` which could be it's columns?
+<!-- reset_layout -->
+<!-- end_slide -->
+
+##### Intro POO
+## Object Oriented Solution
+---
+We want to bind all our properties (nivelTinta, nombreColor) together as a single entity/object.
+![](./assets/gviz/basic_marker.png)
+<!-- end_slide -->
+
+##### Intro POO
+## Object Oriented Solution
 ---
 Let's focus on the red section
 <!-- column_layout: [1,2] -->
 <!-- column: 0 -->
-![](./assets/usuario_class.png)
+![](./assets/gviz/basic_marker_class.png)
 <!-- column: 1 -->
 - What's our name convetion for classes?
 <!-- pause -->
 ```java +line_numbers {all}
-class Usuario {
+class Marker {
    ... 
 }
-class E9IntroPoo{
+class E11IntroPoo{
     public static void main (
         String[] args
     ){...}
@@ -134,13 +150,106 @@ class E9IntroPoo{
 <!-- end_slide -->
 
 ##### Intro POO
-### Classes
+## Object Oriented Solution
 ---
-Finally lets complete our full class
-![](./assets/usuario_attr.png)
+Finally let's complete our full class
+![](./assets/gviz/basic_marker.png)
+<!-- end_slide -->
+
+##### Intro POO
+### Code up-to-date
+---
+```java +line_numbers {all}
+class Marker {
+    String nombreColor;
+    short nivelTinta; 
+}
+class E11IntroPoo{
+    public static void main (String[] args){
+        ...
+    }
+}
+```
+<!-- end_slide -->
+
+##### Intro POO
+#### Class keyword
+---
+The `class` keyword allow to create a user-defined data type (just like int, boolean, float...) by giving it's `concrete implementation`.
+<!-- pause -->
+A template for `creating user-defined objects`.
+<!-- pause -->
+>class
+>A type that defines the implementation of a `particular kind of object`.
+      
+      
+What was implementation?
+<!-- end_slide -->
+
+##### Intro POO
+##### Objects
+---
+We just `defined the object Marker` in our program.
+     
+How do we create a Marker variable?
+
+- Hint 1:
+<!-- pause -->
+> new
+> A Java keyword used to create an instance of a class.            
+
+- Hint 2:
+<!-- pause -->
+\<type> \<nombreVar> = new \<type>();
 
 <!-- end_slide -->
+
+##### Intro POO
+##### Objects
+---
+```java +line_numbers {all}
+class Marker {
+    String nombreColor;
+    short nivelTinta;
+}
+class E11IntroPoo {
+    public static void main(String[] args) {
+        Marker marcadorBlanco = new Marker();
+        marcadorBlanco.nombreColor="Blanco";
+        marcadorBlanco.nivelTinta=100;
+    }
+}
+```
+<!-- end_slide -->
+
+##### Intro POO
+##### Objects
+---
+Let's analyze marcadorBlanco in jdb!
+<!-- end_slide -->
+
+##### Intro POO
+##### Objects
+---
+Our endgoal was to create an object like this:
+
+<!-- column_layout: [1,2] -->
+<!-- column: 0 -->
+![](./assets/markers.png)
+<!-- column: 1 -->
+<!-- pause -->
+```java +line_numbers {all}
+...
+Marker[] estuchePlumones = 
+    new Marker[4];
+
+estuchePlumones[0] = marcadorBlanco;
+...
+```
+<!-- end_slide -->
+
 ###### References
 ---
 https://www.oracle.com/java/technologies/glossary.html
-https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
+https://object-oriented-python.github.io/3_objects.html
+https://docs.python.org/3/glossary.html

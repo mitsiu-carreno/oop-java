@@ -1,0 +1,55 @@
+digraph "classes" {
+  #dot -Tpng -Gsize=9,15\! -Gdpi=100 full_marker.dot -o full_marker.png && kitty icat full_marker.png
+  rankdir=BT
+  charset="utf-8"
+  Marker [
+    color="black",
+    fontcolor="black",
+    label=<{Marker|
+~colorTinta : String
+<br ALIGN="LEFT"/>
+~nivelTinta : short
+<br ALIGN="LEFT"/>
+~nombreColor : String
+<br ALIGN="LEFT"/>
+|
+~escribir(): void
+<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"
+  ];
+
+  GreenMarker [
+    color="black",
+    fontcolor="black",
+    label=<{GreenMarker|
+~colorTinta : String
+<br ALIGN="LEFT"/>
+~nombreColor : String
+<br ALIGN="LEFT"/>
+|
+~GreenMarker(): Constructor
+<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"
+  ];
+
+  RedMarker [
+    color="black",
+    fontcolor="black",
+    label=<{RedMarker|
+~colorTinta : String
+<br ALIGN="LEFT"/>
+~nombreColor : String
+<br ALIGN="LEFT"/>
+|
+~RedMarker(): Constructor
+<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"
+  ];
+
+  GreenMarker -> Marker [arrowhead="empty"]
+  RedMarker -> Marker [arrowhead="empty"]
+}
+

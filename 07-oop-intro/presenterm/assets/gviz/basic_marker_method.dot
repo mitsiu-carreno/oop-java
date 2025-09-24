@@ -1,0 +1,20 @@
+digraph "classes" {
+  #dot -Tpng -Gsize=9,15\! -Gdpi=100 full_marker.dot -o full_marker.png && kitty icat full_marker.png
+  rankdir=BT
+  charset="utf-8"
+  Marker [
+    color="black",
+    fontcolor="black",
+    label=<{Marker|
+~nivelTinta : short
+<br ALIGN="LEFT"/>
+~nombreColor : String
+<br ALIGN="LEFT"/>
+|
+~escribir(): void
+}>,
+    shape="record",
+    style="solid"
+  ];
+}
+
