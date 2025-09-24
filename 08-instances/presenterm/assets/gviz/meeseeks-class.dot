@@ -1,0 +1,19 @@
+digraph "classes" {
+  #dot -Tpng -Gsize=9,15\! -Gdpi=100 full_marker.dot -o full_marker.png && kitty icat full_marker.png
+  rankdir=BT
+  charset="utf-8"
+  Marker [
+    color="black",
+    fontcolor="black",
+    label=<{Meeseeks|
+~requester : String
+<br ALIGN="LEFT"/>
+~minAlive : float
+<br ALIGN="LEFT"/>
+~objective : String
+}>,
+    shape="record",
+    style="solid"
+  ];
+}
+

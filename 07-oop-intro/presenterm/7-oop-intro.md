@@ -15,7 +15,7 @@ theme:
 Mitsiu Alejandro Carreño Sarabia
 <!-- column: 1 -->
 <!-- jump_to_middle -->
-![](./assets/merge.gif)
+![](./assets/lince.png)
 <!-- reset_layout -->
 
 <!-- end_slide -->
