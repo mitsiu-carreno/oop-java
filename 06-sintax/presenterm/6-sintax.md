@@ -188,6 +188,7 @@ for (String element : conjunto){
         break;
     }
     Expr 2
+}
 Expr 3
 ```
 <!-- column: 1 -->
@@ -220,6 +221,7 @@ for (String element : conjunto){
         continue;
     }
     Expr 2
+}
 Expr 3
 ```
 <!-- column: 1 -->
@@ -296,10 +298,10 @@ myFunc();
 ```java +line_numbers {all}
 Expr 1
 
-void saludar(String nombre):
+void saludar(String nombre) {
     Expr 2
     System.out.print("Hola " + nombre)
-
+}
 Expr 3
 saludar("Mitsiu");
 Expr 4

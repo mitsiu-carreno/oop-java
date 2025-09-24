@@ -27,7 +27,9 @@ Agenda
 ├── Magic Words?      
 └── Intro POO      
 &nbsp;&nbsp;&nbsp;&nbsp;├── Scenario    
-&nbsp;&nbsp;&nbsp;&nbsp;└── Object Oriented Solution     
+&nbsp;&nbsp;&nbsp;&nbsp;├── Object Oriented Solution      
+&nbsp;&nbsp;&nbsp;&nbsp;├── Class keyword        
+&nbsp;&nbsp;&nbsp;&nbsp;└── Objects     
 <!-- end_slide -->
 
 # Concepts
